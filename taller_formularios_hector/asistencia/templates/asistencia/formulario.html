@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Asistencia</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; }
+        h1 { color: #2c3e50; }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input, textarea, select { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+        button { margin-top: 20px; padding: 10px 24px; background-color: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #219150; }
+        .errorlist { color: red; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <h1>Registro de Asistencia</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Registrar Asistencia</button>
+    </form>
+</body>
+</html>
