@@ -2,19 +2,70 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asistencia Registrada</title>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 500px; margin: 100px auto; text-align: center; }
-        .card { background: #eafaf1; border: 2px solid #27ae60; padding: 40px; border-radius: 10px; }
-        h1 { color: #27ae60; }
-        a { display: inline-block; margin-top: 20px; color: #27ae60; text-decoration: none; font-weight: bold; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(39,174,96,0.4);
+            border-radius: 16px;
+            padding: 50px 40px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4), 0 0 40px rgba(39,174,96,0.1);
+        }
+
+        .icon { font-size: 72px; margin-bottom: 20px; }
+
+        h1 {
+            color: #2ecc71;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: rgba(255,255,255,0.6);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>✅ Asistencia registrada con éxito</h1>
-        <p>El registro ha sido guardado correctamente en el sistema.</p>
-        <a href="/asistencia/">Registrar otra asistencia</a>
+        <div class="icon">✅</div>
+        <h1>Asistencia registrada con éxito</h1>
+        <p>El registro ha sido guardado correctamente en el sistema. Puedes consultarlo desde el panel de administración.</p>
+        <a href="/asistencia/" class="btn">Registrar otra asistencia</a>
     </div>
 </body>
 </html>
